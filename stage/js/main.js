@@ -7,5 +7,3 @@ $(function () {
         
     });
 });
-
-var myNew = new myNew()

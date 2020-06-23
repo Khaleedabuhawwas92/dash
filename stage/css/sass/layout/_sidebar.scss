@@ -8,5 +8,8 @@
         padding: 15px;
         height: 100%;
         transition-duration: 0.3s;
+        &.no-sidebar{
+            left: -250px;
+        }
     }
 }
