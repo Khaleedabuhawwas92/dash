@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+.page{
+    min-height: 100%;
+    .content-area{
+        min-height: 100%;
+        width: calc(100% - 250px);
+        transition: 0.3s;
+        float: right;
+        will-change: width;
+    }
+}
