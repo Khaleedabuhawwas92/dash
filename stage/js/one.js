@@ -1,1 +1,0 @@
-var myNew = new myNew()

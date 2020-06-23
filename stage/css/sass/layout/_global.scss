@@ -4,11 +4,12 @@
 .page{
     min-height: 100%;
     .content-area{
-        min-height: 100%;
+        min-height: 100vh;
         width: calc(100% - 250px);
         transition: 0.3s;
         float: right;
         will-change: width;
+        background-color: #f2f1f6;
         &.no-sidebar{
             width: 100%;
         }
