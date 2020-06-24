@@ -1,5 +1,5 @@
-.page{
-    .sidebar{
+.page {
+    .sidebar {
         width: 250px;
         position: fixed;
         top: 0;
@@ -9,8 +9,100 @@
         padding: 15px;
         height: 100%;
         transition-duration: 0.3s;
-        &.no-sidebar{
+
+        &.no-sidebar {
             left: -250px;
+        }
+
+        .logo-area {
+            font-weight: bold;
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+
+        .links-area {
+            ul {
+                margin: 0 0 10px 0px;
+            }
+
+            // all Links
+            li {
+                a {
+                    color: #b2bec3;
+                    padding: 10px 20px;
+                    display: block;
+                    transition: 0.3s;
+                    font-family: serif;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+
+            // Min Links
+            > li > a {
+                position: relative;
+                padding-left: 20px;
+                color: #fff;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 3px;
+                    top: 50%;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    transform: translateY(-50%);
+                }
+
+                &:hover {
+                    padding-left: 25px;
+                }
+
+                .icon-angle-right {
+                    float: right;
+                    position: relative;
+                    top: 4px;
+                    transition: 0.3s;
+
+                    &.down {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            .child-links {
+                position: relative;
+                display: none;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    top: 0;
+                    left: 7px;
+                    height: 100%;
+                    background-color: #b2bec3;
+                }
+
+                a {
+                    position: relative;
+
+                    &:hover:before {
+                        content: "";
+                        position: absolute;
+                        width: 3px;
+                        top: 0;
+                        left: 7px;
+                        height: 100%;
+                        background-color: #fff;
+                    }
+                }
+            }
         }
     }
 }

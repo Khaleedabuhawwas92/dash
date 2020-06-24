@@ -9,15 +9,37 @@
     <html lang="en">
       <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <title>Homepage</title>
-        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"/>
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/main.css"/>
       </head>
       <body>
         <div class="page home-page">
-          <div class="sidebar">sidebar</div>
+          <div class="sidebar"> 
+            <div class="logo-area text-center">khaleed </div>
+            <ul class="links-area list-unstyled">
+              <li><a href="#">Homepage</a></li>
+              <li><a class="toggle-submune" href="#">
+                   Formes<i class="icon-angle-right"></i></a>
+                <ul class="child-links list-unstyled">
+                  <li><a href="#">Input</a></li>
+                  <li><a href="#">Textarea</a></li>
+                  <li><a href="#">Check Box</a></li>
+                  <li><a href="#">Radio</a></li>
+                </ul>
+              </li>
+              <li><a class="toggle-submune" href="#">
+                   Misc<i class="icon-angle-right"></i></a>
+                <ul class="child-links list-unstyled">
+                  <li><a href="#">Loading</a></li>
+                  <li><a href="#">Breadcrumbs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <div class="content-area">
             <div class="header"><i class="icon-exchange icon-2x toggle-sidebar"></i></div>
             <div class="content">
@@ -26,6 +48,7 @@
           </div>
         </div>
         <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/main.js"></script>
       </body>
     </html>
