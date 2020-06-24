@@ -1,6 +1,15 @@
 .header {
     background-color: #ffffff;
     padding: 20px;
+    .header-icon {
+        background-color: #dfe6e9;
+        border-radius: 50%;
+        font-size: 22px;
+        padding: 15px;
+        cursor: pointer;
+        color: #2d3436;
+        margin-right: 12px;
+    }
 
     .toggle-sidebar {
         cursor: pointer;
@@ -10,14 +19,7 @@
         display: inline-block;
         margin-left: 20px;
 
-        .toggle-notifiacations {
-            background-color: #dfe6e9;
-            border-radius: 50%;
-            font-size: 22px;
-            padding: 15px;
-            cursor: pointer;
-            color: #2d3436;
-        }
+       
 
         .dropdown-menu {
             min-width: 600px;
