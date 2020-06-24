@@ -1,6 +1,7 @@
 .header {
     background-color: #ffffff;
     padding: 20px;
+
     .header-icon {
         background-color: #dfe6e9;
         border-radius: 50%;
@@ -9,6 +10,7 @@
         cursor: pointer;
         color: #2d3436;
         margin-right: 12px;
+        display: inline-block;
     }
 
     .toggle-sidebar {
@@ -18,8 +20,6 @@
     .notifiaction-container {
         display: inline-block;
         margin-left: 20px;
-
-       
 
         .dropdown-menu {
             min-width: 600px;
@@ -48,12 +48,15 @@
 
             .noti-content {
                 padding: 20px;
-                ul{
+
+                ul {
                     margin: 0;
-                    li{
+
+                    li {
                         padding: 10px;
                         font-size: 16px;
-                        i{
+
+                        i {
                             padding: 5px;
                             font-size: 29px;
                             text-align: center;
@@ -61,7 +64,6 @@
                             margin-right: 15px;
                             border-radius: 50%;
                             background-color: #636e72;
-                            
                         }
                     }
                 }
@@ -78,6 +80,41 @@
                         text-decoration: none;
                     }
                 }
+            }
+        }
+    }
+
+    .usermene-container {
+        float: right;
+
+        .username {
+            cursor: pointer;
+            .avatar {
+                width: 60px;
+                height: 60px;
+            }
+
+            .user {
+                font-weight: bold;
+                color: #777;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+
+        .dropdown-menu {
+            min-width: 600px;
+            border: none;
+            padding: 20px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: -25px;
+                right: 9px;
+                border-style: solid;
+                border-width: 10px;
+                border-color: transparent transparent #333 transparent;
             }
         }
     }
