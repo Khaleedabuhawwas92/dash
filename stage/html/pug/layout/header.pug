@@ -1,2 +1,20 @@
 .header
     i.icon-exchange.icon-2x.toggle-sidebar
+    .dropdown.notifiaction-container
+        i.icon-bell.icon-2x.toggle-notifiacations#notifiaction( data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+        .dropdown-menu(aria-labelledby='notifiaction')
+            .noti-head
+                | Notification 
+                span 50
+            .noti-content 
+                ul.list-unstyled
+                    li
+                        i.icon-youtube-play
+                        | You Have The Watch
+                    li
+                        i.icon-youtube-play
+                        | You Have The Watch
+                    li
+                        i.icon-youtube-play
+                        | You Have The Watch
+            .noti-foot.text-center: a(href="#") Veiw All Notifiaction

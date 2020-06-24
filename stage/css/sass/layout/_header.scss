@@ -1,7 +1,82 @@
-.header{
+.header {
     background-color: #ffffff;
-    padding: 15px;
-    .toggle-sidebar{
+    padding: 20px;
+
+    .toggle-sidebar {
         cursor: pointer;
+    }
+
+    .notifiaction-container {
+        display: inline-block;
+        margin-left: 20px;
+
+        .toggle-notifiacations {
+            background-color: #dfe6e9;
+            border-radius: 50%;
+            font-size: 22px;
+            padding: 15px;
+            cursor: pointer;
+            color: #2d3436;
+        }
+
+        .dropdown-menu {
+            min-width: 600px;
+            border: none;
+            transition-duration: 0.6s;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: -12px;
+                left: 16px;
+                border-style: solid;
+                border-width: 10px;
+                border-color: transparent transparent #333 transparent;
+            }
+
+            .noti-head {
+                background-color: #333;
+                color: #fff;
+                padding: 15px;
+
+                span {
+                    float: right;
+                }
+            }
+
+            .noti-content {
+                padding: 20px;
+                ul{
+                    margin: 0;
+                    li{
+                        padding: 10px;
+                        font-size: 16px;
+                        i{
+                            padding: 5px;
+                            font-size: 29px;
+                            text-align: center;
+                            color: #dfe6e9;
+                            margin-right: 15px;
+                            border-radius: 50%;
+                            background-color: #636e72;
+                            
+                        }
+                    }
+                }
+            }
+
+            .noti-foot {
+                a {
+                    display: block;
+                    padding: 8px;
+                    border-top: 1px solid #dfe6e9;
+                    border-width: 30%;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }

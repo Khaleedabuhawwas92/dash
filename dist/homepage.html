@@ -4,10 +4,10 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Homepage</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"/>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
@@ -35,7 +35,21 @@
         </ul>
       </div>
       <div class="content-area">
-        <div class="header"><i class="icon-exchange icon-2x toggle-sidebar"></i></div>
+        <div class="header"><i class="icon-exchange icon-2x toggle-sidebar"></i>
+          <div class="dropdown notifiaction-container"><i class="icon-bell icon-2x toggle-notifiacations" id="notifiaction" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <div class="dropdown-menu" aria-labelledby="notifiaction">
+              <div class="noti-head">Notification <span>50</span></div>
+              <div class="noti-content"> 
+                <ul class="list-unstyled">
+                  <li><i class="icon-youtube-play"></i>You Have The Watch</li>
+                  <li><i class="icon-youtube-play"></i>You Have The Watch</li>
+                  <li><i class="icon-youtube-play"></i>You Have The Watch</li>
+                </ul>
+              </div>
+              <div class="noti-foot text-center"><a href="#">Veiw All Notifiaction</a></div>
+            </div>
+          </div>
+        </div>
         <div class="container-fluid">
           <div class="content">
             <div class="page-head">
