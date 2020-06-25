@@ -20,6 +20,12 @@ $(function () {
          closeFullscreen();
       }
    });
+
+     //Setting Options
+     $(".toggle-setting").on("click", function () {
+        $(this).find("i").toggleClass("icon-spin");
+      $(this).parent(".settings-box").toggleClass("hide-sttings");
+   });
 });
 
 var elem = document.documentElement;
