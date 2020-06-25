@@ -1,0 +1,13 @@
+$themes: (
+    green-themes:(color:#27ae60),
+    bule-themes:(color:#2980b9),
+    red-themes:(color:#c0392b)
+);
+@each $theme,$map in $themes {
+
+    .#{theme}{
+        .classNmae{
+            color: map-get($map,color)
+        }
+    }
+}
