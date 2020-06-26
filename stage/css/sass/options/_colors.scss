@@ -1,8 +1,9 @@
-$themes: (green-theme: (color: #27ae60,background:rgba(46, 204, 113,0.6)), bule-theme: (color: #2980b9,background:rgba(52, 152, 219,0.6)), red-theme: (color: #c0392b,background:rgba(231, 76, 60,0.6)),defult-theme: (color: #160c0b,background:rgba(34, 47, 62,1.0)));
+$themes: (green-theme: (color: #27ae60, background: rgba(46, 204, 113, 0.6)), bule-theme: (color: #2980b9, background: rgba(52, 152, 219, 0.6)), red-theme: (color: #c0392b, background: rgba(231, 76, 60, 0.6)), defult-theme: (color: #160c0b, background: rgba(34, 47, 62, 1)));
 
 @each $theme, $map in $themes {
     .#{$theme} {
-        $color:map-get($map, color);
+        $color: map-get($map, color);
+
         .page {
             .page-head {
                 .page-title {
@@ -10,12 +11,17 @@ $themes: (green-theme: (color: #27ae60,background:rgba(46, 204, 113,0.6)), bule-
                 }
             }
         }
-        .page .sidebar .links-area .child-links li a:hover:before{
+
+        .page .sidebar .links-area .child-links li a:hover:before {
             background-color: $color;
         }
 
-        .header .toggle-sidebar:hover{
-            color:  $color;
+        .header .toggle-sidebar:hover {
+            color: $color;
+        }
+
+        .header .dropdown-menu .user-info h3 {
+            color: $color;
         }
     }
 }
