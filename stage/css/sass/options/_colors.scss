@@ -2,15 +2,20 @@ $themes: (green-theme: (color: #27ae60,background:rgba(46, 204, 113,0.6)), bule-
 
 @each $theme, $map in $themes {
     .#{$theme} {
+        $color:map-get($map, color);
         .page {
             .page-head {
                 .page-title {
-                    color: map-get($map, color);
+                    color: $color;
                 }
             }
-            .sidebar {
-                background-color: map-get($map, background);
-            }
+        }
+        .page .sidebar .links-area .child-links li a:hover:before{
+            background-color: $color;
+        }
+
+        .header .toggle-sidebar:hover{
+            color:  $color;
         }
     }
 }

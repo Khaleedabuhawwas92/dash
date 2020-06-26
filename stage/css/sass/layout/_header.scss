@@ -15,6 +15,9 @@
 
     .toggle-sidebar {
         cursor: pointer;
+        &:hover{
+            color: rgba(34, 47, 62,1.0);
+        }
     }
 
     .notifiaction-container {
