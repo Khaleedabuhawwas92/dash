@@ -21,10 +21,22 @@ $(function () {
       }
    });
 
-     //Setting Options
-     $(".toggle-setting").on("click", function () {
-        $(this).find("i").toggleClass("icon-spin");
+   //Setting Options
+   $(".toggle-setting").on("click", function () {
+      $(this).find("i").toggleClass("icon-spin");
       $(this).parent(".settings-box").toggleClass("hide-sttings");
+   });
+
+   // Switch Color Themes
+   var classesThemes = [];
+   $(".color-option li").each(function(){
+      classesThemes.push($(this).data("theme"))
+   })
+   console.log(classesThemes);
+   $(".color-option li").on("click", function () {
+      $("body")
+         .removeClass(classesThemes.join(" "))
+         .addClass($(this).data("theme"));
    });
 });
 

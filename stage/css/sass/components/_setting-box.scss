@@ -1,4 +1,4 @@
-.settings-box  {
+.settings-box {
     position: fixed;
     top: 0;
     right: 0;
@@ -8,9 +8,15 @@
     z-index: 20;
     padding: 20px;
     transition-duration: 0.3s;
-    &.hide-sttings{
+    .option-title {
+        font-size: 19px;
+        font-weight: bold;
+        color: #777;
+    }
+    &.hide-sttings {
         right: -250px;
     }
+
     .toggle-setting {
         position: absolute;
         right: 250px;
@@ -22,5 +28,28 @@
         border-radius: 10px 0 0 10px;
     }
 
-    
+    .color-option {
+        ul {
+            $colors: #27ae60, #2980b9, #c0392b,#160c0b,#fff;
+
+            @for $i from 1 to length($colors) {
+                li:nth-child(#{$i}) {
+                    background-color: nth($colors, $i);
+                }
+            }
+
+            li {
+                width: 20px;
+                height: 20px;
+                opacity: 0.8;
+                cursor: pointer;
+                border-radius: 50%;
+                display: inline-block;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }

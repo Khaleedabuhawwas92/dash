@@ -1,10 +1,14 @@
 .settings-box.hide-sttings
     .toggle-setting
         i.icon-gear
-    .setting-content
+    .setting-content.text-center
+        .option-box.color-option
+            h4.option-title Color Themes
+            - var themes =["green-theme", "bule-theme","red-theme",'defult-theme']
+            ul.list-unstyled
+                each theme in themes
+                    li(data-theme=theme)
         .option-box
-            h4 Color Option
+            h4.option-title Font Option
         .option-box
-            h4 Font Option
-        .option-box
-            h4 Sidebar Option
+            h4.option-title Sidebar Option
