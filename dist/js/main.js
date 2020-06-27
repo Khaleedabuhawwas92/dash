@@ -29,15 +29,52 @@ $(function () {
 
    // Switch Color Themes
    var classesThemes = [];
-   $(".color-option li").each(function(){
-      classesThemes.push($(this).data("theme"))
-   })
-   console.log(classesThemes);
-   $(".color-option li").on("click", function () {
-      $("body")
-         .removeClass(classesThemes.join(" "))
-         .addClass($(this).data("theme"));
+   $(".color-option li").each(function () {
+      classesThemes.push($(this).data("theme"));
    });
+
+   $(".color-option li").on("click", function () {
+      $("body").removeClass(classesThemes.join(" "));
+      localStorage.setItem("myColor", $(this).data("theme"));
+      var color = localStorage.getItem("myColor");
+      $("body").addClass(color);
+   });
+
+   // Switch Fonts
+   var classesFont = [];
+   $(".font-option select option").each(function () {
+      classesFont.push($(this).val());
+   });
+   $(".font-option select").on("change", function () {
+      $("body")
+         .removeClass(classesFont.join(" "));
+         localStorage.setItem("myFont", $(this).find("option:selected").val());
+         var font = localStorage.getItem("myFont");
+         $("body").addClass(font);
+   });
+
+    // Switch BACKGROUND Sidebar
+    var classessidebar = [];
+    $(".sidebar-option li").each(function () {
+      classessidebar.push($(this).data("background"));
+    });
+ 
+    $(".sidebar-option li").on("click", function () {
+       $("body").removeClass(classessidebar.join(" "));
+       localStorage.setItem("mySidebar", $(this).data("background"));
+       var sidebar = localStorage.getItem("mySidebar");
+       $("body").addClass(sidebar);
+    });
+});
+
+// Funaction In Loade
+$(window).on("load", function (e) {
+   var color = localStorage.getItem("myColor");
+   var font = localStorage.getItem("myFont");
+   var sidebar = localStorage.getItem("mySidebar");
+   $("body").addClass(sidebar);
+   $("body").addClass(color);
+   $("body").addClass(font);
 });
 
 var elem = document.documentElement;

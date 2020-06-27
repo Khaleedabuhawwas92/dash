@@ -1,5 +1,6 @@
 $themes: (green-theme: (color: #27ae60, background: rgba(46, 204, 113, 0.6)), bule-theme: (color: #2980b9, background: rgba(52, 152, 219, 0.6)), red-theme: (color: #c0392b, background: rgba(231, 76, 60, 0.6)), defult-theme: (color: #160c0b, background: rgba(34, 47, 62, 1)));
 
+$backgrounds:(sidebar-gray:(background:#777),sidebar-balck:(background:#212120),sidebar-offWhaite:(background:#ebebeb));
 @each $theme, $map in $themes {
     .#{$theme} {
         $color: map-get($map, color);
@@ -22,6 +23,17 @@ $themes: (green-theme: (color: #27ae60, background: rgba(46, 204, 113, 0.6)), bu
 
         .header .dropdown-menu .user-info h3 {
             color: $color;
+        }
+    }
+}
+
+
+@each $background, $map in $backgrounds {
+    .#{$background} {
+        $color: map-get($map, background);
+        .page .sidebar{
+            background-color: $color;
+            color: black;
         }
     }
 }
