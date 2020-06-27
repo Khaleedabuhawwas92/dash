@@ -1,7 +1,7 @@
 .sidebar 
     .logo-area.text-center khaleed 
     ul.links-area.list-unstyled
-        li: a(href="homepage.html") Homepage
+        li: a(href="homepage.html" class= pageTitle === "Homepage" ? 'active' : '') Homepage
         li
             a.toggle-submune(href="#") 
                 | Formes
@@ -18,6 +18,5 @@
             ul.child-links.list-unstyled
                 li: a(href="#") Loading
                 li: a(href="#") Breadcrumbs
-        li
-            a.toggle-submune(href="chart.html") 
-                | Chart
+        li: a.toggle-submune(href="chart.html" class= pageTitle === "Chart" ? 'active' : '') 
+            | Chart
