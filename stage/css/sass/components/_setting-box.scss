@@ -8,11 +8,13 @@
     z-index: 20;
     padding: 20px;
     transition-duration: 0.3s;
+
     .option-title {
         font-size: 19px;
         font-weight: bold;
         color: #777;
     }
+
     &.hide-sttings {
         right: -250px;
     }
@@ -30,7 +32,7 @@
 
     .color-option {
         ul {
-            $colors: #27ae60, #2980b9, #c0392b,#160c0b;
+            $colors: #27ae60, #2980b9, #c0392b, #160c0b;
 
             @for $i from 1 through length($colors) {
                 li:nth-child(#{$i}) {
@@ -52,21 +54,25 @@
             }
         }
     }
-    .font-option{
-        select{
+
+    .font-option {
+        select {
             text-transform: capitalize;
         }
     }
 
-    .sidebar-option{
+    .sidebar-option {
         margin-top: 20px;
+
         ul {
             $colors: #777, #212120, #ebebeb;
+
             @for $i from 1 through length($colors) {
                 li:nth-child(#{$i}) {
                     background-color: nth($colors, $i);
                 }
             }
+
             li {
                 width: 20px;
                 height: 20px;
