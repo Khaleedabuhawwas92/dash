@@ -1,0 +1,18 @@
+.location-info
+    table.table.table-hover.table-responsive-sm
+        thead
+        - var headers =["#", "lOCATIONS","Ditales", "Actions"]
+        - var values =[ "الكينا","الصنوبر","المثالية","الحدين"]
+            tr
+                each header in headers
+                    th(scope='col')=header  
+        tbody
+            each value ,key in values
+                tr 
+                    th(scope='row' )=key + 1
+                        td=value
+                        td ooo
+                        td
+                            i.btn.btn-info Edit
+                            i.btn.btn-danger Delete
+

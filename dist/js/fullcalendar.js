@@ -140,6 +140,7 @@
       },
    };
 
+
    var fc = ($.fullCalendar = { version: "1.6.4" });
    var fcViews = (fc.views = {});
 
@@ -6096,7 +6097,7 @@ function enableTextSelection(element) {
             week: "MMMM yyyy", // September 2009
             day: "MMMM yyyy", // Tuesday, Sep 8, 2009
          },
-         allDaySlot: false,
+         allDaySlot: true,
          selectHelper: true,
          select: function (start, end, allDay) {
             var title = prompt("Plase Enter Your Event:");
@@ -6189,4 +6190,5 @@ function enableTextSelection(element) {
          ],
       });
    });
+  
 })(jQuery);

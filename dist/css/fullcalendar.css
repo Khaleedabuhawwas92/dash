@@ -322,6 +322,7 @@ a.fc-event {
 	height: 100%;
 	overflow: hidden;
 	line-height: 15px;
+	
 	}
 	
 .fc-event-time,
@@ -596,6 +597,7 @@ table.fc-border-separate {
 .fc-event-vert .fc-event-inner {
 	position: relative;
 	z-index: 2;
+	
 	}
 	
 .fc-event-vert .fc-event-bg { /* makes the event lighter w/ a semi-transparent overlay  */

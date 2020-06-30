@@ -46,25 +46,35 @@ $(function () {
       classesFont.push($(this).val());
    });
    $(".font-option select").on("change", function () {
-      $("body")
-         .removeClass(classesFont.join(" "));
-         localStorage.setItem("myFont", $(this).find("option:selected").val());
-         var font = localStorage.getItem("myFont");
-         $("body").addClass(font);
+      $("body").removeClass(classesFont.join(" "));
+      localStorage.setItem("myFont", $(this).find("option:selected").val());
+      var font = localStorage.getItem("myFont");
+      $("body").addClass(font);
    });
 
-    // Switch BACKGROUND Sidebar
-    var classessidebar = [];
-    $(".sidebar-option li").each(function () {
+   // Switch BACKGROUND Sidebar
+   var classessidebar = [];
+   $(".sidebar-option li").each(function () {
       classessidebar.push($(this).data("background"));
-    });
- 
-    $(".sidebar-option li").on("click", function () {
-       $("body").removeClass(classessidebar.join(" "));
-       localStorage.setItem("mySidebar", $(this).data("background"));
-       var sidebar = localStorage.getItem("mySidebar");
-       $("body").addClass(sidebar);
-    });
+   });
+
+   $(".sidebar-option li").on("click", function () {
+      $("body").removeClass(classessidebar.join(" "));
+      localStorage.setItem("mySidebar", $(this).data("background"));
+      var sidebar = localStorage.getItem("mySidebar");
+      $("body").addClass(sidebar);
+   });
+
+   $(".modal-area").click(function () {
+      $(this).fadeOut();
+   });
+   $(".form-contint").click(function (e) {
+      e.stopPropagation();
+   });
+   $(".fc-event").on("click", function () {
+      $(this).fadeOut();
+   });
+  
 });
 
 // Funaction In Loade
@@ -75,6 +85,8 @@ $(window).on("load", function (e) {
    $("body").addClass(sidebar);
    $("body").addClass(color);
    $("body").addClass(font);
+  
+  
 });
 
 var elem = document.documentElement;

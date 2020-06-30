@@ -1,5 +1,5 @@
-- var pageTitle ="Homepage";
-- var description ="This is The Home Page ";
+- var pageTitle ="Locations";
+- var description ="This is The Location Page ";
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -7,13 +7,16 @@ html(lang="en")
         include pug/layout/styles
     body
         .page.home-page
+            include pug/layout/modal 
             .setting-box
                 include pug/components/setting-box
             include pug/layout/sidebar
             .content-area
-                include pug/layout/header
+                include pug/layout/header   
                 .container-fluid
                     .content
-                        include pug/components/page-head         
+                        include pug/components/page-head
+                    .location-info
+                        include pug/layout/locationsInfo
         include pug/layout/scriptes
         

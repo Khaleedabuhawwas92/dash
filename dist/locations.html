@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Homepage</title>
+    <title>Locations</title>
     <link href="css/fullcalendar.css" rel="stylesheet"/>
     <link href="css/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"/>
@@ -14,6 +14,21 @@
   </head>
   <body>
     <div class="page home-page">
+      <div class="modal-area">
+        <div class="form-contint">
+          <h3 class="page-title text-center">Locations</h3>
+          <form class="popup-toggle" action="">
+            <div class="form-group">
+              <label class="lead" for="exampleInputEmail1">Email address</label>
+              <input class="form-control input-primary" type="email" id="exampleInputEmail1" placeholder="First name" aria-describedby="emailHelp"/><small class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label class="lead" for="exampleInputEmail1">Email address</label>
+              <input class="form-control input-primary" type="email" id="exampleInputEmail1" placeholder="First name" aria-describedby="emailHelp"/><small class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div><i class="btn btn-info">Submit</i>
+          </form>
+        </div>
+      </div>
       <div class="setting-box">
         <div class="settings-box hide-sttings">
           <div class="toggle-setting"><i class="icon-gear"></i></div>
@@ -50,7 +65,7 @@
       <div class="sidebar"> 
         <div class="logo-area text-center">khaleed </div>
         <ul class="links-area list-unstyled">
-          <li><a class="active" href="homepage.html">Homepage</a></li>
+          <li><a href="homepage.html">Homepage</a></li>
           <li><a class="toggle-submune" href="#">
                Formes<i class="icon-angle-right"></i></a>
             <ul class="child-links list-unstyled">
@@ -67,7 +82,7 @@
               <li><a href="#">Breadcrumbs</a></li>
             </ul>
           </li>
-          <li><a class="toggle-submune" href="locations.html">
+          <li><a class="toggle-submune active" href="locations.html">
                Locations</a></li>
           <li><a class="toggle-submune" href="calender.html">
                Calender</a></li>
@@ -120,8 +135,51 @@
         <div class="container-fluid">
           <div class="content">
             <div class="page-head">
-              <h1 class="page-title">Homepage</h1>
-              <p class="page-description lead">This is The Home Page </p>
+              <h1 class="page-title">Locations</h1>
+              <p class="page-description lead">This is The Location Page </p>
+            </div>
+          </div>
+          <div class="location-info">
+            <div class="location-info">
+              <table class="table table-hover table-responsive-sm">
+                <thead></thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">lOCATIONS</th>
+                  <th scope="col">Ditales</th>
+                  <th scope="col">Actions</th>
+                </tr>
+                <tbody>
+                  <tr> 
+                    <th scope="row">1
+                      <td>الكينا</td>
+                      <td>ooo</td>
+                      <td><i class="btn btn-info">Edit</i><i class="btn btn-danger">Delete</i></td>
+                    </th>
+                  </tr>
+                  <tr> 
+                    <th scope="row">2
+                      <td>الصنوبر</td>
+                      <td>ooo</td>
+                      <td><i class="btn btn-info">Edit</i><i class="btn btn-danger">Delete</i></td>
+                    </th>
+                  </tr>
+                  <tr> 
+                    <th scope="row">3
+                      <td>المثالية</td>
+                      <td>ooo</td>
+                      <td><i class="btn btn-info">Edit</i><i class="btn btn-danger">Delete</i></td>
+                    </th>
+                  </tr>
+                  <tr> 
+                    <th scope="row">4
+                      <td>الحدين</td>
+                      <td>ooo</td>
+                      <td><i class="btn btn-info">Edit</i><i class="btn btn-danger">Delete</i></td>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
