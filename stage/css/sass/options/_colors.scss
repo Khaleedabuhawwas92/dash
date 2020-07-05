@@ -36,5 +36,9 @@ $backgrounds: (sidebar-gray: (background: #777), sidebar-balck: (background: #21
             background-color: $color;
             color: black;
         }
+
+        .location-info th {
+            background-color: $color;
+        }
     }
 }

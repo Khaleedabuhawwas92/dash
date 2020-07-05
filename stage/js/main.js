@@ -1,5 +1,6 @@
 $(function () {
    "use strict";
+  
    /// toggle sidebar smothly
    $(".toggle-sidebar").on("click", function () {
       $(".content-area, .sidebar").toggleClass("no-sidebar");
@@ -74,7 +75,11 @@ $(function () {
    $(".fc-event").on("click", function () {
       $(this).fadeOut();
    });
-  
+
+   // Form event prevents
+   $(".modal-area form").on("click", function (e) {
+      e.preventDefault();
+   });
 });
 
 // Funaction In Loade
@@ -85,8 +90,6 @@ $(window).on("load", function (e) {
    $("body").addClass(sidebar);
    $("body").addClass(color);
    $("body").addClass(font);
-  
-  
 });
 
 var elem = document.documentElement;
@@ -121,3 +124,4 @@ function closeFullscreen() {
       document.msExitFullscreen();
    }
 }
+

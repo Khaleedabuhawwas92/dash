@@ -6100,20 +6100,25 @@ function enableTextSelection(element) {
          allDaySlot: true,
          selectHelper: true,
          select: function (start, end, allDay) {
-            var title = prompt("Plase Enter Your Event:");
-            if (title) {
+            $(".modal-area ").fadeIn();
+             var amount =$(".input-primary").val();
+
+             if (amount) {
                calendar.fullCalendar(
                   "renderEvent",
                   {
-                     title: title,
+                     title: amount,
                      start: start,
                      end: end,
                      allDay: allDay,
                      className: "info",
                   },
                   true // make the event "stick"
+                 
                );
+              
             }
+           
             calendar.fullCalendar("unselect");
          },
          droppable: true, // this allows things to be dropped onto the calendar !!!

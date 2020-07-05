@@ -1,8 +1,12 @@
 .location-info{
+    
     margin-top: 100px;
     tr:nth-child(even){background-color: rgba(223, 230, 233,1.0);}
+  th{
+    transition-duration: 1s;
+  }
     i{
         margin-right: 15px;
-    }
+    } 
    
 }
