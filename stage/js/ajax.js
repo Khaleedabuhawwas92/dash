@@ -16,7 +16,6 @@ $(function () {
    });
 });
 
-
 // request save locations
 $("#save").on("click", function () {
    var company_name = $("#company_name").val();
@@ -28,7 +27,7 @@ $("#save").on("click", function () {
       url: "http://localhost:8080/api/locations",
       data: { company_name, city, discription },
       success: function (response) {
-         window.location.reload()
+         window.location.reload();
       },
    });
 
@@ -54,6 +53,65 @@ function tableCreate(res) {
          copyText();
       });
       edit.classList.add("btn", "btn-warning");
+      edit.addEventListener("click", function () {
+         $.confirm({
+            title: "تعديل",
+            content:
+               "" +
+               '<form action="" class="formName text-right">' +
+               '<div class="form-group">' +
+               "<label>اسم الشركة</label>" +
+               '<input type="text" class="name form-control" id="company" required  />' +
+               "<label>المدينة</label>" +
+               '<input type="text"  class="name form-control"   id="city"/>' +
+               "<label>الوصف</label>" +
+               '<input type="text"  class="name form-control"  id="discription"   />' +
+               "</div>" +
+               "</form>",
+
+            buttons: {
+               formSubmit: {
+                  text: "Update",
+                  btnClass: "btn-blue",
+
+                  action: function () {
+                     var id = valueOfElement.id;
+                     var data = {
+                        company_name: $("#company").val(),
+                        city: $("#city").val(),
+                        discription: $("#discription").val(),
+                     };
+                     $.ajax({
+                        type: "PUT",
+                        dataType: "json",
+                        url: "http://localhost:8080/api/locations/" + id,
+                        data: data,
+                        success: function (response) {
+                           console.log(response);
+                        },
+                     });
+                     $.alert('location was updated successfully.');
+                     window.location.reload();
+                  },
+               },
+               cancel: function () {
+                  //close
+               },
+            },
+            onContentReady: function () {
+               $("#company").val(valueOfElement.company_name);
+               $("#city").val(valueOfElement.city);
+               $("#discription").val(valueOfElement.discription);
+
+               var jc = this;
+               this.$content.find("form").on("submit", function (e) {
+                  // if the user submits the form by pressing enter in the field.
+                  e.preventDefault();
+                  jc.$$formSubmit.trigger("click"); // reference the button and click it
+               });
+            },
+         });
+      });
       delet.classList.add("btn", "btn-danger");
       delet.addEventListener("click", function () {
          $.confirm({
@@ -112,7 +170,6 @@ function tableCreate(res) {
    });
 }
 
-
 //search for input
 function searchFunction() {
    var input, filter, table, tr, td, i, txtValue;
@@ -153,5 +210,3 @@ function selectText(res) {
       window.getSelection().addRange(range);
    }
 }
-
-
