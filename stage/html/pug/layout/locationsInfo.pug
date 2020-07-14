@@ -1,17 +1,11 @@
 .location-info
-    table.table.table-hover.table-responsive-sm
+    input#myInput(type="text" onkeyup="searchFunction()" placeholder="بحث" title="Type in a name")
+    i#add-location.text-center.location-button.btn.btn-info.icon-plus-sign-alt اضافة
+    table#myTable.table.table-hover.table-responsive-sm
         thead
-        - var headers =["#", "الموقع","المدينة", "Actions"];
-        - var values = 20;
+        - var headers =["#", "اسم الشركة","المدينة","الوصف", "Actions"];
             tr
                 each header in headers
                     th(scope='col' )=header  
         tbody#intral
-            //- tr 
-            //-     td 1
-            //-     td.text-location sdss
-            //-     td.txt-contant  sss
-            //-     td
-            //-         i.btn.btn-info تعديل
-            //-         i.btn.btn-danger حذف 
             

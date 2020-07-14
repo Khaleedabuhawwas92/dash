@@ -6100,8 +6100,8 @@ function enableTextSelection(element) {
          allDaySlot: true,
          selectHelper: true,
          select: function (start, end, allDay) {
-            $(".modal-area ").fadeIn();
-             var amount =$(".input-primary").val();
+           
+             var amount =prompt("enter your event");
 
              if (amount) {
                calendar.fullCalendar(

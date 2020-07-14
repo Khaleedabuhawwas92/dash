@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Locations</title>
+    <title>المواقع</title>
     <link href="css/fullcalendar.css" rel="stylesheet"/>
     <link href="css/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"/>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&amp;family=Public+Sans:ital,wght@1,100&amp;family=Roboto:wght@300&amp;family=Source+Sans+Pro:ital,wght@1,900&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
@@ -16,12 +17,16 @@
     <div class="page home-page">
       <div class="modal-area">
         <div class="form-contint">
-          <h3 class="page-title text-center">Locations</h3>
-          <form class="popup-toggle">
+          <h3 class="page-title text-center"> ادخل المواقع</h3>
+          <form class="popup-toggle text-right">
             <div class="form-group">
-              <label class="lead" for="exampleInputEmail1">Enter your Event</label>
-              <input class="form-control input-primary" type="text" id="exampleInputEmail1" placeholder="First name" aria-describedby="emailHelp"/><small class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
+              <label for="company_name">اسم الشركة</label>
+              <input class="form-control input-primary text-right" type="text" id="company_name" placeholder="اسم الشركة"/>
+              <label for="city_name">المدينة</label>
+              <input class="form-control input-primary text-right" type="text" id="city_name" placeholder="المدينة"/>
+              <label for="description">الوصف</label>
+              <input class="form-control input-primary text-right" type="text" id="description" placeholder="الوصف"/>
+            </div><i class="btn btn-info" id="save">اضافة</i>
           </form>
         </div>
       </div>
@@ -131,18 +136,20 @@
         <div class="container-fluid">
           <div class="content">
             <div class="page-head">
-              <h1 class="page-title">Locations</h1>
+              <h1 class="page-title">المواقع</h1>
               <p class="page-description lead">This is The Location Page </p>
             </div>
           </div>
           <div class="location-info">
             <div class="location-info">
-              <table class="table table-hover table-responsive-sm">
+              <input id="myInput" type="text" onkeyup="searchFunction()" placeholder="بحث" title="Type in a name"/><i class="text-center location-button btn btn-info icon-plus-sign-alt" id="add-location">اضافة</i>
+              <table class="table table-hover table-responsive-sm" id="myTable">
                 <thead></thead>
                 <tr>
                   <th scope="col">#</th>
-                  <th scope="col">الموقع</th>
+                  <th scope="col">اسم الشركة</th>
                   <th scope="col">المدينة</th>
+                  <th scope="col">الوصف</th>
                   <th scope="col">Actions</th>
                 </tr>
                 <tbody id="intral"></tbody>
@@ -161,6 +168,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

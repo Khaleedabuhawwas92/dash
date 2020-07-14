@@ -1,6 +1,6 @@
 $(function () {
    "use strict";
-  
+
    /// toggle sidebar smothly
    $(".toggle-sidebar").on("click", function () {
       $(".content-area, .sidebar").toggleClass("no-sidebar");
@@ -80,6 +80,13 @@ $(function () {
    $(".modal-area form").on("click", function (e) {
       e.preventDefault();
    });
+
+   $("#add-location").on("click", function () {
+      $("#company_name").val("");
+      $("#city_name").val("");
+      $("#description").val("");
+      $(".modal-area").fadeIn();
+   });
 });
 
 // Funaction In Loade
@@ -125,3 +132,7 @@ function closeFullscreen() {
    }
 }
 
+// To copy location
+function copy(res) {
+   document.getElementById("myTable").deleteRow(res);
+}
