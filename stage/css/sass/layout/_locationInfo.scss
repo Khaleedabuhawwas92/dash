@@ -14,10 +14,11 @@
         }
     }
 
-    .location-button {
+    .location-Addbutton {
         float: right;
-        padding: 7px;
-        width: 74px;
+        padding: 10px;
+        width: 100px;
+        font-weight: bold;
     }
 
     .icon-plus-sign-alt {
@@ -32,11 +33,31 @@
         background-color: rgba(223, 230, 233, 1);
     }
 
-    th {
-        transition-duration: 1s;
+    td {
+        font-size: 19px;
+        font-weight: bold;
     }
 
     i {
         margin-right: 15px;
+    }
+}
+
+.jconfirm-type-default {
+    background-color: rgba(236, 240, 241, 1) !important;
+
+    .jconfirm-title {
+        text-align: center;
+    }
+
+    .icon-warning-sign {
+        color: rgba(192, 57, 43, 1);
+    }
+
+    .inner-style {
+        padding: 15px;
+        font-size: 15px;
+        color: rgb(172, 170, 182);
+        font-weight: bold;
     }
 }

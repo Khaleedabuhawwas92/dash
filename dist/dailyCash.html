@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Homepage</title>
+    <title>صندوق النقد اليومي</title>
     <link href="css/fullcalendar.css" rel="stylesheet"/>
     <link href="css/fullcalendar.print.css" rel="stylesheet" media="print"/>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"/>
@@ -52,7 +52,7 @@
       <div class="sidebar"> 
         <div class="logo-area text-center">khaleed </div>
         <ul class="links-area list-unstyled">
-          <li><a class="active" href="homepage.html">Homepage</a></li>
+          <li><a href="homepage.html">Homepage</a></li>
           <li><a class="toggle-submune" href="#">
                Formes<i class="icon-angle-right"></i></a>
             <ul class="child-links list-unstyled">
@@ -73,7 +73,7 @@
                Locations</a></li>
           <li><a class="toggle-submune" href="calender.html">
                Calender</a></li>
-          <li><a class="toggle-submune" href="dailyCash.html">
+          <li><a class="toggle-submune active" href="dailyCash.html">
                النقد اليومي</a></li>
         </ul>
       </div>
@@ -122,10 +122,16 @@
           </div>
         </div>
         <div class="container-fluid">
-          <div class="content">
+          <div class="content text-center">
             <div class="page-head">
-              <h1 class="page-title">Homepage</h1>
-              <p class="page-description lead">This is The Home Page </p>
+              <h1 class="page-title">صندوق النقد اليومي</h1>
+              <p class="page-description lead">صندوق النقد اليومي لمعرفة المصاريف اليومية </p>
+            </div>
+          </div>
+          <div class="continer-daily">
+            <div class="daily-cash">
+              <input id="myInput" type="text" onkeyup="searchFunction()" placeholder="بحث" title="Type in a name"/><i class="text-center location-Addbutton btn btn-info icon-plus-sign-alt" id="add-cash">اضافة</i>
+              <table class="table table-hover table-responsive-sm" id="one"></table>
             </div>
           </div>
         </div>

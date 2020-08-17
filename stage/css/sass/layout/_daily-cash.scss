@@ -1,0 +1,31 @@
+.continer-daily {
+    margin-top: 50px;
+
+    #myInput {
+        background-image: url("/image/search.png");
+        background-position: -7px;
+        background-repeat: no-repeat;
+        width: 50%;
+        font-size: 16px;
+        padding: 21px 20px 21px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+
+        &:before {
+            content: "";
+        }
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(223, 230, 233, 1);
+    }
+
+    td {
+        font-size: 19px;
+        font-weight: bold;
+    }
+    
+    i {
+        margin-right: 15px;
+    }
+}

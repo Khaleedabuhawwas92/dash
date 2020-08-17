@@ -1,5 +1,5 @@
-- var pageTitle ="Calender";
-- var description ="This is The Calender Page ";
+- var pageTitle ="صندوق النقد اليومي";
+- var description ="صندوق النقد اليومي لمعرفة المصاريف اليومية ";
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -13,8 +13,8 @@ html(lang="en")
             .content-area
                 include pug/layout/header
                 .container-fluid
-                    .content
+                    .content.text-center
                         include pug/components/page-head 
-                    include pug/layout/calender       
+                    .continer-daily
+                        include pug/layout/dailycash          
         include pug/layout/scriptes
-        

@@ -10,6 +10,7 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&amp;family=Public+Sans:ital,wght@1,100&amp;family=Roboto:wght@300&amp;family=Source+Sans+Pro:ital,wght@1,900&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"/>
+    <link href="https://unpkg.com/tabulator-tables@4.7.2/dist/css/tabulator.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
   </head>
@@ -20,12 +21,14 @@
           <h3 class="page-title text-center"> ادخل المواقع</h3>
           <form class="popup-toggle text-right">
             <div class="form-group">
-              <label for="company_name">اسم الشركة</label>
-              <input class="form-control input-primary text-right" type="text" id="company_name" placeholder="اسم الشركة"/>
-              <label for="city_name">المدينة</label>
+              <label class="lead" for="company_name">أسم الشركة</label>
+              <input class="form-control input-primary text-right" type="text" id="company_name" placeholder="اسم الشركة" required="required"/>
+              <label class="lead" for="city_name">المدينة</label>
               <input class="form-control input-primary text-right" type="text" id="city_name" placeholder="المدينة"/>
-              <label for="description">الوصف</label>
+              <label class="lead" for="description">الوصف</label>
               <input class="form-control input-primary text-right" type="text" id="description" placeholder="الوصف"/>
+              <label class="lead" for="description">الموقع</label>
+              <input class="form-control input-primary text-right" type="text" id="location" placeholder="الموقع"/>
             </div><i class="btn btn-info" id="save">اضافة</i>
           </form>
         </div>
@@ -87,6 +90,8 @@
                Locations</a></li>
           <li><a class="toggle-submune" href="calender.html">
                Calender</a></li>
+          <li><a class="toggle-submune" href="dailyCash.html">
+               النقد اليومي</a></li>
         </ul>
       </div>
       <div class="content-area">
@@ -142,18 +147,8 @@
           </div>
           <div class="location-info">
             <div class="location-info">
-              <input id="myInput" type="text" onkeyup="searchFunction()" placeholder="بحث" title="Type in a name"/><i class="text-center location-button btn btn-info icon-plus-sign-alt" id="add-location">اضافة</i>
-              <table class="table table-hover table-responsive-sm" id="myTable">
-                <thead></thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">اسم الشركة</th>
-                  <th scope="col">المدينة</th>
-                  <th scope="col">الوصف</th>
-                  <th scope="col">Actions</th>
-                </tr>
-                <tbody id="intral"></tbody>
-              </table>
+              <input id="myInput" type="text" onkeyup="searchFunction()" placeholder="بحث" title="Type in a name"/><i class="text-center location-Addbutton btn btn-info icon-plus-sign-alt" id="add-location">اضافة </i>
+              <table class="table table-hover table-responsive-sm" id="tow"></table>
             </div>
           </div>
         </div>
@@ -167,6 +162,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.7.2/dist/js/tabulator.min.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script src="js/main.js"></script>

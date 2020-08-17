@@ -140,7 +140,6 @@
       },
    };
 
-
    var fc = ($.fullCalendar = { version: "1.6.4" });
    var fcViews = (fc.views = {});
 
@@ -6072,15 +6071,15 @@ function enableTextSelection(element) {
       });
       /* initialize the calendar
 			-----------------------------------------------------------------*/
-			const birthday = new Date();
-			const day1 = birthday.getDay();
+      const birthday = new Date();
+      const day1 = birthday.getDay();
       var calendar = $("#calendar").fullCalendar({
          header: {
             left: "title",
             center: "agendaDay,agendaWeek,month",
             right: "prev,next today",
-		 },
-		 
+         },
+
          editable: true,
          firstDay: 2, //  1(Monday) this can be changed to 0(Sunday) for the USA system
          selectable: true,
@@ -6097,13 +6096,13 @@ function enableTextSelection(element) {
             week: "MMMM yyyy", // September 2009
             day: "MMMM yyyy", // Tuesday, Sep 8, 2009
          },
+
          allDaySlot: true,
          selectHelper: true,
          select: function (start, end, allDay) {
-           
-             var amount =prompt("enter your event");
+            var amount = prompt("enter your event");
 
-             if (amount) {
+            if (amount) {
                calendar.fullCalendar(
                   "renderEvent",
                   {
@@ -6114,11 +6113,9 @@ function enableTextSelection(element) {
                      className: "info",
                   },
                   true // make the event "stick"
-                 
                );
-              
             }
-           
+
             calendar.fullCalendar("unselect");
          },
          droppable: true, // this allows things to be dropped onto the calendar !!!
@@ -6140,6 +6137,7 @@ function enableTextSelection(element) {
                $(this).remove();
             }
          },
+
          events: [
             {
                title: "All Day Event",
@@ -6195,5 +6193,4 @@ function enableTextSelection(element) {
          ],
       });
    });
-  
 })(jQuery);

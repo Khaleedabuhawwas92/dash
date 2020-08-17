@@ -3,12 +3,15 @@
         h3.page-title.text-center  ادخل #{pageTitle}
         form.popup-toggle.text-right
             .form-group
-                label(for="company_name") اسم الشركة
-                input.form-control.input-primary.text-right(type="text" id="company_name" placeholder="اسم الشركة" )
+                label.lead(for="company_name") أسم الشركة
+                input.form-control.input-primary.text-right(type="text" id="company_name" placeholder="اسم الشركة" required )
 
-                label(for="city_name") المدينة
+                label.lead(for="city_name") المدينة
                 input.form-control.input-primary.text-right(type="text" id="city_name" placeholder="المدينة")
 
-                label(for="description") الوصف
+                label.lead(for="description") الوصف
                 input.form-control.input-primary.text-right(type="text" id="description" placeholder="الوصف" )
+
+                label.lead(for="description") الموقع
+                input.form-control.input-primary.text-right(type="text" id="location" placeholder="الموقع" )
             i#save.btn.btn-info اضافة

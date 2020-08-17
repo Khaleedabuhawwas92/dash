@@ -85,6 +85,7 @@ $(function () {
       $("#company_name").val("");
       $("#city_name").val("");
       $("#description").val("");
+      $("#location").val("");
       $(".modal-area").fadeIn();
    });
 });
