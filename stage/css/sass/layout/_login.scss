@@ -1,0 +1,37 @@
+body {
+    background: url("../image/login.jpg") no-repeat fixed center 100%;
+    background-size: cover;
+}
+
+.contant-login {
+    margin: 150px 400px;
+
+    form {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        margin: 30px auto;
+
+        .form-group {
+            text-align: left;
+
+            label {
+                font-size: 20px;
+            }
+
+            .form-control {
+                padding: 17px;
+                background-color: #ecf0f1;
+
+                &:focus {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        button {
+            font-size: 22px;
+            padding: 7px 40px;
+        }
+    }
+}

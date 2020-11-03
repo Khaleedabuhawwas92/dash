@@ -1,113 +1,112 @@
-.page {
-    .sidebar {
-        width: 250px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        color: white;
-        background-color: #292c33;
-        padding: 15px;
-        height: 100%;
-        transition-duration: 0.6s;
-        z-index: 99;
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: #292c33;
+    padding: 15px;
+    height: 100%;
+    transition-duration: 0.6s;
+    z-index: 99;
 
-        &.no-sidebar {
-            left: -250px;
+    &.no-sidebar {
+        left: -250px;
+    }
+
+    .logo-area {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #93aec0;
+        text-shadow: 1px 2px #6a7274;
+    }
+
+    .links-area {
+        ul {
+            margin: 0 0 10px 0px;
         }
 
-        .logo-area {
-            font-weight: bold;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: rgba(109, 94, 50, 0.973);
-        }
-
-        .links-area {
-            ul {
-                margin: 0 0 10px 0px;
-            }
-
-            // all Links
-            li {
-                a {
-                    color: #b2bec3;
-                    padding: 10px 20px;
-                    display: block;
-                    transition: 0.3s;
-
-                    &:hover {
-                        text-decoration: none;
-                        color: white;
-                    }
-                }
-            }
-
-            // Min Links
-            > li > a {
-                position: relative;
-                padding-left: 20px;
-                color: #fff;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    left: 3px;
-                    top: 50%;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    border: 2px solid #fff;
-                    transform: translateY(-50%);
-                }
+        // all Links
+        li {
+            a {
+                color: #b2bec3;
+                padding: 10px 20px;
+                display: block;
+                transition: 0.3s;
 
                 &:hover {
-                    padding-left: 25px;
+                    text-decoration: none;
+                    color: white;
                 }
+            }
+        }
 
-                &.active {
-                    &:before {
-                        border-color: yellowgreen;
-                    }
-                }
+        // Min Links
+        > li > a {
+            position: relative;
+            padding-left: 20px;
+            color: #fff;
 
-                .icon-angle-right {
-                    float: right;
-                    position: relative;
-                    top: 4px;
-                    transition: 0.3s;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 3px;
+                top: 50%;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                transform: translateY(-50%);
+            }
 
-                    &.down {
-                        transform: rotate(90deg);
-                    }
+            &:hover {
+                padding-left: 25px;
+            }
+
+            &.active {
+                &:before {
+                    border-color: yellowgreen;
                 }
             }
 
-            .child-links {
+            .icon-angle-right {
+                float: right;
                 position: relative;
-                display: none;
+                top: 4px;
+                transition: 0.3s;
 
-                &:before {
+                &.down {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .child-links {
+            position: relative;
+            display: none;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                top: 0;
+                left: 7px;
+                height: 100%;
+                background-color: #b2bec3;
+            }
+
+            a {
+                position: relative;
+
+                &:hover:before {
                     content: "";
                     position: absolute;
                     width: 3px;
                     top: 0;
                     left: 7px;
                     height: 100%;
-                    background-color: #b2bec3;
-                }
-
-                a {
-                    position: relative;
-
-                    &:hover:before {
-                        content: "";
-                        position: absolute;
-                        width: 3px;
-                        top: 0;
-                        left: 7px;
-                        height: 100%;
-                        background-color: #fff;
-                    }
+                    background-color: #fff;
                 }
             }
         }

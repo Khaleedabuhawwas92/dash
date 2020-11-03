@@ -23,11 +23,9 @@ gulp.task("html", function () {
 gulp.task("css", function () {
    return gulp
       .src(["stage/css/**/*.css", "stage/css/**/*.scss"])
-
       .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
       .pipe(autoprefixer())
       .pipe(concat("main.css"))
-
       .pipe(gulp.dest("dist/css"))
       .pipe(livereload());
 });

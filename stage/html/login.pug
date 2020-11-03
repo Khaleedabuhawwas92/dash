@@ -1,0 +1,20 @@
+- var pageTitle ="login";
+- var description ="Please enter Your password ";
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include pug/layout/meta
+        include pug/layout/styles
+    body
+
+        .page.home-page
+            .contant-login 
+                form
+                    include pug/components/page-head
+                    .form-group
+                        label(for='exampleFormControlInput1') Email address
+                        input#exampleFormControlInput1.form-control(type='email' placeholder='name@example.com')
+                    .form-group
+                        label(for='exampleFormControlSelect1') Password
+                        input#inputPassword.form-control(type="password" placeholder='PASSWORD')
+                    button.btn.btn-info(type="button") Login

@@ -88,6 +88,13 @@ $(function () {
       $("#location").val("");
       $(".modal-area").fadeIn();
    });
+   $("#add-cash").on("click", function () {
+      $("#company_name").val("");
+      $("#city_name").val("");
+      $("#description").val("");
+      $("#location").val("");
+      $(".modal-area").fadeIn();
+   });
 });
 
 // Funaction In Loade

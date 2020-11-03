@@ -1,39 +1,49 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Open Sans', sans-serif;
-    &.public{
+
+    &.public {
         font-family: 'Public Sans', sans-serif;
     }
-    &.open{
+
+    &.open {
         font-family: 'Open Sans', sans-serif;
     }
-    &.roboto{
+
+    &.roboto {
         font-family: 'Roboto', sans-serif;
     }
-    &.sourse{
+
+    &.sourse {
         font-family: 'Source Sans Pro', sans-serif;
     }
 }
-.page{
+
+.page {
     min-height: 100%;
-    .content-area{
+
+    .content-area {
         min-height: 100vh;
         width: calc(100% - 250px);
         transition: 0.6s;
         float: right;
         will-change: width;
         background-color: #f2f1f6;
-        &.no-sidebar{
+        overflow: scroll;
+
+        &.no-sidebar {
             width: 100%;
-        }  
+        }
     }
-    .page-head{
+
+    .page-head {
         padding: 20px;
         margin-top: 20px;
-        .page-title{
-            
+
+        .page-title {
             font-weight: bold;
         }
     }

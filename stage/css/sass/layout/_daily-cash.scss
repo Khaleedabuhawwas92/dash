@@ -24,8 +24,30 @@
         font-size: 19px;
         font-weight: bold;
     }
-    
+
     i {
         margin-right: 15px;
+    }
+}
+
+.sumations {
+    display: block;
+    background-color: royalblue;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    margin: 2px;
+}
+
+.cash {
+    float: right;
+    padding: 10px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.icon-plus-sign-alt {
+    &:before {
+        padding-right: 10px;
     }
 }

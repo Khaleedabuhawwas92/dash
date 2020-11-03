@@ -5,11 +5,13 @@
     position: fixed;
     z-index: 1000;
     display: none;
+
     .form-contint {
-        background-color: rgba(223, 230, 233, 1.0);
+        background-color: rgba(223, 230, 233, 1);
         width: 500px;
-        margin: 340px auto;
+        margin: 200px auto;
         border-radius: 10px;
+
         .page-title {
             padding-top: 21px;
         }
@@ -21,10 +23,10 @@
                 .input-primary {
                     padding: 20px;
                 }
-                small{
+
+                small {
                     color: red;
                 }
-                
             }
         }
     }

@@ -1,28 +1,6 @@
-"use strict";
-function generateTableHead1(table1, data) {
-   let thead = table1.createTHead();
-   let row = thead.insertRow();
-   for (let key of data) {
-      let th = document.createElement("th");
-      let text = document.createTextNode(key);
-      th.appendChild(text);
-      row.appendChild(th);
-   }
-}
-
-function generateTable1(table1, data) {
-   for (let element of data) {
-      let row = table1.insertRow();
-      for (key in element) {
-         let cell = row.insertCell();
-         let text = document.createTextNode(element[key]);
-         cell.appendChild(text);
-      }
-   }
-}
-
-let table1 = document.querySelector("#tow");
 // funcation to Get All Locations
+"use strict";
+let table1 = document.querySelector("#tow");
 $(function () {
    $.ajax({
       type: "GET",
@@ -30,23 +8,72 @@ $(function () {
       data: "",
       dataType: "json",
       success: function (response) {
+         console.log(response);
          if (response === null) {
             alert("null");
          } else {
-            let data = Object.keys(response[0]);
-            generateTableHead1(table1, data);
-            generateTable1(table1, response);
+            let data = ["Comany Name", "location", "discription", "ID"];
+            generateTableHead(table1, data);
+            generateTable2(table1, response);
          }
       },
    });
 });
+function generateTable2(table, data) {
+   for (let element of data) {
+      let row = table.insertRow();
+
+      for (let key in element) {
+         let cell = row.insertCell();
+         let text = document.createTextNode(element[key]);
+         cell.appendChild(text);
+      }
+
+      var delet = document.createElement("i");
+      delet.classList.add("btn", "btn-info");
+      var DeltetText = document.createTextNode("حذف");
+      delet.appendChild(DeltetText);
+      row.appendChild(delet);
+      delet.addEventListener("click", function () {
+         $.confirm({
+            rtl: true,
+            columnClass: "col-md-12",
+            title: "حذف",
+            content:
+               "هل انت متاكد حذف " + "<b>" + element.company_name + "</b>",
+            icon: "icon-warning-sign",
+            type: "red",
+            typeAnimated: true,
+            buttons: {
+               tryAgain: {
+                  text: "حذف",
+                  btnClass: "btn-red",
+                  action: function () {
+                     $.ajax({
+                        url:
+                           "http://localhost:8080/api/locations/modifiy/" +
+                           element.id,
+                        type: "PUT",
+                        success: function (response) {
+                           console.log("Detetd is done");
+                        },
+                     });
+                     window.location.reload();
+                  },
+               },
+               close: function () {},
+            },
+         });
+      });
+   }
+}
 
 // request save locations
 $("#save").on("click", function () {
-   var company_name = $("#company_name").val();
-   var city = $("#city_name").val();
-   var discription = $("#description").val();
-   var location = $("#location").val();
+   var company_name = $("#company_name").val(),
+      city = $("#city_name").val(),
+      discription = $("#description").val(),
+      location = $("#location").val();
    $.ajax({
       type: "POST",
       dataType: "json",
@@ -234,10 +261,10 @@ function searchFunction() {
    var input, filter, table, tr, td, i, txtValue;
    input = document.getElementById("myInput");
    filter = input.value.toUpperCase();
-   table = document.getElementById("myTable");
+   table = document.getElementById("tow");
    tr = table.getElementsByTagName("tr");
    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[1];
+      td = tr[i].getElementsByTagName("td")[0];
       if (td) {
          txtValue = td.textContent || td.innerText;
          if (txtValue.toUpperCase().indexOf(filter) > -1) {
